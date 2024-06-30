@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Button from './Button.tsx';
+import Counter from './Counter.tsx';
 import './styles.module.css';
 
-const meta: Meta<typeof Button> = {
-    title: 'Button',
-    component: Button,
+const meta: Meta<typeof Counter> = {
+    title: 'Counter',
+    component: Counter,
     tags: ['autodocs'],
     argTypes: {
         variant: {
@@ -16,42 +16,40 @@ const meta: Meta<typeof Button> = {
         },
         size: {
             type: 'string',
-            options: ['s', 'm', 'l'],
-            control: {
-                type: 'radio',
-            },
-        },
-        type: {
-            type: 'string',
-            options: ['button', 'submit', 'reset'],
+            options: ['xs', 's', 'm', 'l', 'xl'],
             control: {
                 type: 'radio',
             },
         },
         children: {
-            name: 'label' || 'counter',
-            type: 'string' || 'number',
+            name: 'count',
+            type: 'number',
         },
     },
 };
 
 export default meta;
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof Counter>;
 
 export const Primary: Story = {
     args: {
-        children: 'Click me',
+        children: '1',
         variant: 'primary',
-        size: 'l',
-        type: 'button',
+        size: 'xl',
     },
 };
 
 export const Secondary: Story = {
     args: {
-        children: 'Click me',
+        children: '3',
         variant: 'secondary',
-        size: 'm',
-        type: 'button',
+        size: 'l',
+    },
+};
+
+export const Small: Story = {
+    args: {
+        variant: 'primary',
+        size: 's',
     },
 };

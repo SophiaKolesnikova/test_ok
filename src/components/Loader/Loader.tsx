@@ -1,16 +1,16 @@
 import React from 'react';
-import styles from './styles.module.css';
+import classes from './styles.module.css';
+import cn from "classnames";
 
 interface LoaderProps {
-    message?: string;
+    size: string;
+    variant: string;
 }
 
-const Loader: React.FC<LoaderProps> = ({ message = 'Загрузка...' }) => {
+const Loader: React.FC<LoaderProps> = ({size, variant}) => {
+    const mainCn = cn(classes.loader, classes[size], classes[variant]);
     return (
-        <div className={styles.loader}>
-            {/*<div className={styles.loaderAnimation}></div>*/}
-            <p>{message}</p>
-        </div>
+        <div className={mainCn}></div>
     );
 };
 

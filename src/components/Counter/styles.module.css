@@ -1,0 +1,51 @@
+.counter {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    border-radius: 50%;
+}
+
+.primary {
+    background: #2FB675;
+    color: #FFFFFF;
+}
+
+.secondary {
+    background: #8366561F;
+    color: #2E2F33;
+}
+
+.xs {
+    width: 8px;
+    height: 8px;
+    line-height: 8px;
+}
+
+.s {
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+}
+
+.m {
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 0.7em;
+}
+
+.l {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 0.7em;
+}
+
+.xl {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 0.7em;
+}
